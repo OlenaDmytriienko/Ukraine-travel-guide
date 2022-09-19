@@ -7,12 +7,13 @@
           <title>Ukraine Travel Guide</title>
           <link rel="stylesheet" href="./style.css/style.css">
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
 <body>  
 <div class="page-wrapper">
 <header class="header">
            <div class="container header__containe">
-                    <div >
+                    <div>
                             <a href="./index.html" class="header__logo">
                                 <img src="" alt="logo">
                             </a>
@@ -39,10 +40,8 @@
                                     </li>
                             </ul> 
 
-                        </nav>
-                       
+                        </nav> 
                         <div class="header__mag">
-                              <a href=""><img src="" alt="shop"></a> 
                               <input class="gam-btn-input" id="m1" type="checkbox">
                               <label class="gam-btn" for="m1">
                                   <div class="header__gam-btn">
@@ -51,26 +50,38 @@
                                   </div>
                               </label>    
                                </div>
-
-            
-
-
+                               <a href=""><img src="" alt="shop"></a> 
            </div>
 </header>
+<section class="first">
+<h1>START YOUR JOURNEY</h1>
+<p class="first__par">Where do you want to go?</p>
+<input type="text" placeholder="Enter city                  &#xF002;" style="font-family:PT Sans Caption, FontAwesome" />
+
+</section> 
+
+
+
+
+
+
+
 </div>
 
 
 <script>
- let btn = document.querySelectorAll('.header__gam-line')
+             
+
+let btn = document.querySelectorAll('.header__gam-btn')
 let inp = document.querySelectorAll('.gam-btn-input')
-let div = document.querySelectorAll('.header__menu')
+let div = document.getElementsByClassName('.header__menu')
 
  btn.onclick = () => {
       console.log("test")
           if(inp.checked == true){
-                    div.classList.add.style.disply = flex;
+                    div.style.display = 'flex';
           } else { 
-          div.classList.remove.style.disply = flex;
+          div.style= 'flex';
           }
           } 
           

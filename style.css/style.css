@@ -30,7 +30,6 @@ a {
 }
 
 .header__containe {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +90,6 @@ a {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     background-color: beige;
-    z-index: 1;
   }
 }
 
@@ -142,28 +140,36 @@ a {
 }
 
 .header__gam-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 7px;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .header__gam-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 7px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
 }
 
 .header__gam-line {
   width: 11px;
   height: 1px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
   background: black;
 }
 
@@ -175,9 +181,44 @@ a {
   display: none;
 }
 
-.header .gam-btn-input:checked +.header__menu {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+.header .gam-btn-input:checked ~ .header__menu {
+  display: block;
+}
+
+.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:first-child {
+  -webkit-transform: rotate(311deg) translate(-3px, 3px);
+          transform: rotate(311deg) translate(-3px, 3px);
+}
+
+.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:last-child {
+  -webkit-transform: rotate(230deg) translate(2px, 3px);
+          transform: rotate(230deg) translate(2px, 3px);
+}
+
+.first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.first__par {
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 28px;
 }
 /*# sourceMappingURL=style.css.map */

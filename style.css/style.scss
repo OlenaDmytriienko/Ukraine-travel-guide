@@ -26,7 +26,6 @@ a {
     padding: 16px 0;
   }
   &__containe {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +60,7 @@ a {
       gap: 26px;
       transform: translate(-50%, -50%);
       background-color: beige;
-      z-index: 1;
+//       z-index: 1;
     }
   }
 
@@ -107,31 +106,58 @@ a {
   }
 
   &__gam-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
+    display: none;
+
+    @media (max-width: $tab) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
   }
   &__gam-line {
     width: 11px;
     height: 1px;
+    transition: all 0.7s;
     background: black;
   }
   .gam-btn {
     z-index: 10;
   }
-
   .gam-btn-input {
     display: none;
 
     &:checked {
-      +.header__menu {
-        display: flex !important;
+ ~ .header__menu {
+        display: block;
+      }
+      ~ .gam-btn {
+        .header__gam-line:first-child {
+          transform: rotate(311deg) translate(-3px, 3px);
+        }
+        .header__gam-line:last-child {
+          transform: rotate(230deg) translate(2px, 3px);
+        }
       }
     }
   }
+}
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+h1 {
+  font-size: 48px;
+}
+.first__par {
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 28px;
 }
