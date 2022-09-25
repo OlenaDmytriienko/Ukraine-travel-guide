@@ -5,16 +5,17 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Ukraine Travel Guide</title>
-          <link rel="stylesheet" href="./style.css/style.css">
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
           <link rel="stylesheet" href="./style.css/css/uikit.css">
           <script src="./js/uikit.js"></script>
           <script src="./js/uikit.min.js"></script>  
+          <link rel="stylesheet" href="./style.css/style.css">
 </head>
 <body>  
 <div class="page-wrapper">
-
+<div class="">
 <header class="header">
     <!-- <img src="./img/home.jpg" alt=""> -->
            <div class="container header__containe">
@@ -85,30 +86,45 @@
                              
            </div>
 </header>
-<section class="first">
+<section class="first uk-position-relative">
+    <div class="uk-position-cover uk-cover-container">
+        <img uk-cover src="./img/nature.jpeg" alt="nature">
+    </div>
+  
 <h1>START YOUR JOURNEY</h1>
 <p class="first__par">Where do you want to go?</p>
 <!-- <input type="text" placeholder="Enter city                  &#xF002;" style="font-family:PT Sans Caption, FontAwesome" /> -->
 <label class="first__label" id="label">
     <input class="first__input" id="input" type="text" placeholder="Enter city">
   </label>
+  
 </section> 
-
+</div>
 <section class=" box container">
     <h2 class="box__title">LATEST FROM THE BLOG</h2>
     <div class="uk-child-width-1-4@m uk-grid-small uk-grid-match" uk-grid>
-        
         <div>
             <div class="uk-card uk-card-default">
-                <div class="box__img uk-img"></div>
+                <div class="box__img uk-img">
+                    <img src="./img/img.jpg" alt="">
+                </div>
                 <div class="box__item1 ">
-               
                 <div class="box__item3">
-                    <div class="box__arch">Architecture</div>
+                    <div class="box__arch"><img src="./img/arch.svg" alt="arch">Architecture</div>
+                    <p class="box__p">15 FEB 2022</p>
           </div>
-          <h3 class="uk-card-title">Default</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eaque.</p>
+          <h3 class="box__item--title uk-card-title">Lviv opera 
+            sculpture glory</h3>
+          <p class="box__item--text">The Lviv National Opera and Ballet Theater remains the most exquisite and prestigious building in the city and the main...</p>
           <div class="box__item2">
+            <div class="box__item2--box">
+                <img class="box__item2--img" src="./img/Eye.svg" alt="eye">
+                <p class="box__item2--p">765</p>
+            </div>
+            <div class="box__item2--box1">
+                <img class="box__item2--img" src="./img/Share.svg" alt="eye">
+                <p class="box__item2--share">Share</p>
+            </div>
             <a href="" class="box__more">Read more</a>
           </div>
         </div>
@@ -116,15 +132,26 @@
         </div>
         <div>
             <div class="uk-card uk-card-default">
-                <div class="box__img uk-img"></div>
+                <div class="box__img uk-img">
+                    <img src="./img/img1.jpg" alt="">
+                </div>
                 <div class="box__item1 ">
                
                 <div class="box__item3">
-                    <div class="box__arch">Mountains</div>
+                    <div class="box__arch"><img src="./img/mount.svg" alt="arch">Mountains</div>
+                    <p class="box__p">10 FEB 2022</p>
           </div>
-          <h3 class="uk-card-title">Primary</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eaque.</p>
+          <h3 class="box__item--title uk-card-title">Bukovel - the best ski resort in ukraine</h3>
+          <p class="box__item--text">Bukovel is a ski resort in the Carpathian mountains located at an altitude of 900 meters above sea level. This resort is...</p>
           <div class="box__item2">
+            <div class="box__item2--box">
+                <img class="box__item2--img" src="./img/Eye.svg" alt="eye">
+                <p class="box__item2--p">765</p>
+            </div>
+            <div class="box__item2--box1">
+                <img class="box__item2--img"  src="./img/Share.svg" alt="eye">
+                <p class="box__item2--share">Share</p>
+            </div>
             <a href="" class="box__more">Read more</a>
           </div>
           </div>
@@ -132,15 +159,27 @@
         </div>
         <div>
             <div class="uk-card uk-card-default ">
-                <div class="box__img uk-img"></div>
+                <div class="box__img uk-img">
+                    <img src="./img/img2.jpg" alt="">
+                </div>
                 <div class="box__item1 ">
                 
                 <div class="box__item3">
-                    <div class="box__arch">Architecture</div>
+                    <div class="box__arch"><img src="./img/arch.svg" alt="arch">Architecture</div>
+                    <p class="box__p">03 FEB 2022</p>
           </div>
-          <h3 class="uk-card-title">Secondary</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eaque.</p>
+          <h3 class="box__item--title uk-card-title">Sharivka 
+            Sugar castle</h3>
+          <p class="box__item--text">Sharivka Palace is one of the main architectural treasures nearby Kharkiv, in Ukraine, located in the middle of a forest... </p>
           <div class="box__item2">
+            <div class="box__item2--box">
+                <img class="box__item2--img" src="./img/Eye.svg" alt="eye">
+                <p class="box__item2--p">765</p>
+            </div>
+            <div class="box__item2--box1">
+                <img class="box__item2--img"  src="./img/Share.svg" alt="eye">
+                <p class="box__item2--share">Share</p>
+            </div>
             <a href="" class="box__more">Read more</a>
           </div>
             </div>
@@ -148,21 +187,33 @@
         </div>
         <div>
             <div class="uk-card uk-card-default ">
-                <div class="box__img uk-img"></div>
+                <div class="box__img uk-img">
+                    <img src="./img/img3.jpg" alt="">
+                </div>
                 <div class="box__item1 ">
                 
                 <div class="box__item3">
-                    <div class="box__arch">Architecture</div>
+                    <div class="box__arch"><img src="./img/arch.svg" alt="arch">Architecture</div>
+                    <p class="box__p">27 DEC 2021</p>
           </div>
-          <h3 class="uk-card-title">Third</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eaque.</p>
+          <h3 class="box__item--title uk-card-title">Old Bratslav
+            water mill</h3>
+          <p class="box__item--text">The Bratslav Mill in Nemyriv is a symbiosis of Central European Baroque and elements of Victorian architecture. The mill was built in...</p>
           <div class="box__item2">
+            <div class="box__item2--box">
+                <img class="box__item2--img" src="./img/Eye.svg" alt="eye">
+                <p class="box__item2--p">765</p>
+            </div>
+            <div class="box__item2--box1">
+                <img class="box__item2--img"  src="./img/Share.svg" alt="eye">
+                <p class="box__item2--share">Share</p>
+            </div>
             <a href="" class="box__more">Read more</a>
           </div>
             </div>
         </div>
         </div>
-       <div class="box__btn uk-align-center"><button class="uk-button uk-button-primary ">Primary</button></div> 
+       <div class="box__btn uk-align-center"><button class=" box__btn-p uk-button uk-button-primary ">view all posts</button></div> 
     
 <!-- <div class="box">
            <h2 class="box__title">LATEST FROM THE BLOG</h2>
@@ -244,20 +295,21 @@
                 <path d="M124.661 20.2052C124.23 19.7735 123.707 19.4447 123.131 19.2434C122.41 18.994 121.65 18.8742 120.888 18.8898C120.686 18.8898 120.46 18.8898 120.207 18.8898C119.954 18.8898 119.694 18.9004 119.427 18.9092C119.16 18.9181 118.897 18.9304 118.656 18.9481C118.416 18.9658 118.188 18.987 117.995 19.0135V28.1843C118.117 28.202 118.299 28.2179 118.538 28.2303C118.777 28.2427 119.036 28.2568 119.31 28.2692C119.585 28.2816 119.851 28.2939 120.108 28.3028C120.364 28.3116 120.568 28.3152 120.716 28.3152C121.53 28.3439 122.342 28.2111 123.105 27.9244C123.702 27.6866 124.239 27.3174 124.675 26.8441C125.072 26.401 125.369 25.8768 125.545 25.3077C125.724 24.7312 125.814 24.131 125.813 23.5273C125.819 22.898 125.727 22.2716 125.539 21.6709C125.364 21.1206 125.063 20.6188 124.661 20.2052ZM123.621 24.6907C123.54 25.0452 123.386 25.3792 123.17 25.6719C122.942 25.9716 122.643 26.2098 122.3 26.365C121.863 26.557 121.389 26.6494 120.912 26.6355H120.711L120.423 26.6214L120.134 26.609C120.066 26.6067 119.998 26.6002 119.931 26.5896V20.649C120.092 20.628 120.253 20.6173 120.415 20.6171C120.626 20.6171 120.829 20.6171 121.031 20.6171C121.496 20.5985 121.959 20.6951 122.378 20.8983C122.706 21.0666 122.99 21.3086 123.209 21.6055C123.413 21.8923 123.558 22.2168 123.635 22.5602C123.711 22.8909 123.75 23.2288 123.752 23.568C123.751 23.946 123.707 24.3227 123.621 24.6907Z" fill="#212121"/>
                 <path d="M130.424 26.4852V24.4183H134.022V22.7175H130.424V20.7284H134.388V19.0276H128.488V28.186H134.454V26.4852H130.424Z" fill="#212121"/>
                 </svg>
+            
         </a>
     </div>
 <div class="footer__item2">
-<p>Have a project or a question? </p>
-<p>Contact us: <a href="travel.guideUKR@gmail.com">travel.guideUKR@gmail.com</a></p>
+<p class="footer__item2--p">Have a project or a question? </p>
+<p class="footer__item2--contact">Contact us: <a class="footer__link" href="travel.guideUKR@gmail.com">travel.guideUKR@gmail.com</a></p>
 </div>
 
 <div class="footer__item3">
-    <p>Subscribe our accounts</p>
+    <p class="footer__item3--p">Subscribe our accounts</p>
 <div class="footer__item3--social">
     <a href="#" class="footer__item3--img"><img src="./img/f.svg" alt="facebook"></a>
-        <a href="#" class="footer__item3--img"><img src="./img/i.svg" alt="instagram"></a>
-            <a href="#" class="footer__item3--img"><img src="./img/t.svg" alt="telegram"></a>
-                <a href="#" class="footer__item3--img"><img src="./img/p.svg" alt="pinterest"></a>
+    <a href="#" class="footer__item3--img"><img src="./img/i.svg" alt="instagram"></a>
+    <a href="#" class="footer__item3--img"><img src="./img/t.svg" alt="telegram"></a>
+    <a href="#" class="footer__item3--img"><img src="./img/p.svg" alt="pinterest"></a>
 </div>
 
 </div>
