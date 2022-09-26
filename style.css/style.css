@@ -83,7 +83,7 @@ a {
     position: fixed;
     width: 100%;
     height: 100vh;
-    top: 49%;
+    top: 50%;
     left: 50%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -173,7 +173,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 7px;
+    gap: 5px;
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -181,11 +181,11 @@ a {
 }
 
 .header__gam-line {
-  width: 11px;
+  width: 16px;
   height: 1px;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
-  background: black;
+  background: white;
 }
 
 .header .gam-btn {
@@ -210,13 +210,17 @@ a {
 }
 
 .header .gam-btn-input:checked ~ .gam-btn .header__gam-line:first-child {
-  -webkit-transform: rotate(311deg) translate(-3px, 3px);
-          transform: rotate(311deg) translate(-3px, 3px);
+  -webkit-transform: rotate(311deg) translate(-2px, 2px);
+          transform: rotate(311deg) translate(-2px, 2px);
+}
+
+.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:nth-child(2) {
+  display: none;
 }
 
 .header .gam-btn-input:checked ~ .gam-btn .header__gam-line:last-child {
-  -webkit-transform: rotate(230deg) translate(2px, 3px);
-          transform: rotate(230deg) translate(2px, 3px);
+  -webkit-transform: rotate(230deg) translate(2px, 2px);
+          transform: rotate(230deg) translate(2px, 2px);
 }
 
 .first {
@@ -236,6 +240,12 @@ a {
   height: 100vh;
 }
 
+@media (max-width: 991px) {
+  .first {
+    height: 450px;
+  }
+}
+
 .first__par {
   padding-bottom: 24px;
   font-size: 20px;
@@ -243,6 +253,14 @@ a {
   margin: 0px;
   z-index: 1;
   color: white;
+}
+
+@media (max-width: 991px) {
+  .first__par {
+    font-size: 14px;
+    padding-bottom: 16px;
+    line-height: 20px;
+  }
 }
 
 #label {
@@ -279,6 +297,15 @@ h1 {
   color: white;
 }
 
+@media (max-width: 991px) {
+  h1 {
+    text-align: center;
+    font-size: 22px;
+    line-height: 28px;
+    margin: 0;
+  }
+}
+
 .box__title {
   margin: 0 auto;
   text-align: center;
@@ -290,11 +317,24 @@ h1 {
   line-height: 37px;
 }
 
+@media (max-width: 991px) {
+  .box__title {
+    margin-bottom: 48px;
+    margin-top: 120px;
+  }
+}
+
 .box__btn {
   margin: 0 auto;
   padding-top: 36px;
   padding-bottom: 120px;
   color: #1c64a7 !important;
+}
+
+@media (max-width: 991px) {
+  .box__btn {
+    padding-bottom: 60px;
+  }
 }
 
 .box__btn-p {
@@ -362,7 +402,7 @@ h1 {
   padding-bottom: 4px;
   margin: 0;
   text-align: start;
-  color: #0e3457;
+  color: #0e3457 !important;
 }
 
 .box__item--text {
@@ -450,8 +490,27 @@ footer {
   gap: 80px;
 }
 
+@media (max-width: 991px) {
+  .footer__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 4px;
+  }
+}
+
 .footer__link {
   color: #1c64a7;
+}
+
+.footer__logo {
+  display: none;
 }
 
 .footer__item {
@@ -464,10 +523,31 @@ footer {
   padding-bottom: 60px;
 }
 
+@media (max-width: 991px) {
+  .footer__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 23px;
+  }
+}
+
 .footer__item2--contact {
   font-family: "Montserrat" !important;
   color: #0e3457 !important;
   font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  .footer__item2--contact {
+    font-size: 14px;
+  }
 }
 
 .footer__item2--p {
@@ -476,10 +556,22 @@ footer {
   font-size: 16px;
 }
 
+@media (max-width: 991px) {
+  .footer__item2--p {
+    font-size: 14px;
+  }
+}
+
 .footer__item3--p {
   font-family: "Montserrat" !important;
   font-size: 16px;
   color: #0e3457 !important;
+}
+
+@media (max-width: 991px) {
+  .footer__item3--p {
+    font-size: 14px;
+  }
 }
 
 .footer__item3--social {
@@ -491,7 +583,33 @@ footer {
           justify-content: space-between;
 }
 
+@media (max-width: 991px) {
+  .footer__item3--social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
 .footer__item3--img {
   cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .footer__uk-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer__img {
+    width: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 /*# sourceMappingURL=style.css.map */
