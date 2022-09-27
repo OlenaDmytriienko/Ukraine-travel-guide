@@ -217,8 +217,15 @@ a {
     color: rgba(28, 100, 167, 1);
     vertical-align: middle;
   }
-  &__item3 {
+  &__item4 {
     display: block;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(186, 199, 210, 1);
+
+  }
+  &__item3 {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     color: rgba(186, 199, 210, 1);
