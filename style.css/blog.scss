@@ -218,10 +218,11 @@ a {
     vertical-align: middle;
   }
   &__item3 {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     color: rgba(186, 199, 210, 1);
+
   }
   &__p {
     font-size: 12px;
@@ -312,13 +313,28 @@ footer {
     display: flex;
     flex-direction: row;
   }
+  &__box-item {
+    display: flex;
+    flex-wrap: nowrap !important;
+    list-style: none;
+    justify-content: center;
+   
+  }
+  &__box-item1 {
+    margin-left: 200px;
+
+    // @media (max-width: $tab) {
+    //  margin-left: 100px;
+    // }
+  }
+ 
   &__link {
     color: rgba(28, 100, 167, 1);
   }
   &__logo {
     display: block;
     @media (max-width: $tab) {
-    display: none;
+      display: none;
     }
   }
   &__item {
@@ -381,13 +397,13 @@ footer {
   }
 }
 .swiper {
-  width: 100%;
-  &__wrapper {
+  // width: 100%;
+  &-wrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
   }
-  &__slide {
+  &-slide {
     @media (max-width: $tab) {
       text-align: center;
       font-size: 18px;
@@ -398,16 +414,19 @@ footer {
     }
   }
 }
-.swiper__slide {
-  width: 80%;
+.swiper-slide:first-child {
+  width: 10%;
 }
 
-.swiper__slide:nth-child(2n) {
+.swiper-slide:nth-child(2n) {
   width: 60%;
 }
 
-.swiper__slide:nth-child(3n) {
+.swiper-slide:nth-child(3n) {
   width: 40%;
+}
+.swiper-slide:nth-child(4n) {
+  width: 20%;
 }
 .container1 {
   display: flex;
@@ -415,7 +434,7 @@ footer {
   align-items: center;
   margin-top: 28px;
   margin-bottom: 65px;
-  gap: 2px;
+  gap: 0px;
 }
 
 .btn {
@@ -476,4 +495,29 @@ footer {
 
 span {
   color: #adb5bd;
+}
+.uk-grid-column-medium {
+  display: inline;
+}
+.wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+margin-bottom: 24px;
+  overflow: auto;
+  min-width: 100%;
+  height: 37px;
+  // gap: 10px;
+  @media (max-width: $tab) {
+
+  }
+}
+
+.book {
+  width: auto;
+  // height: 100vh;
+  max-width: 30vw;
+  margin-right: 20px;
+  // height: 37px;
 }

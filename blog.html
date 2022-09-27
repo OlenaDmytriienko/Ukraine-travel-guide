@@ -69,30 +69,31 @@
  
                     <section class=" box container">
                               <h2 class="box__title">LATEST BLOG POSTS</h2>
-
-                              <div class="swiper mySwiper">
-                                        <div class="swiper__wrapper filter">
-                                                  <div class="swiper__slide box__item3">
+<!-- 
+                              <div class="swiper mySwiper"> -->
+                                        <div class=" wrapper">
+                                            <div class=" box__item3 book">
+                                                <div class="box__arch"><img src="./img/filter.svg" alt="arch">All</div>          
+                                                </div>
+                                                  <div class=" box__item3 book">
                                                             <div class="box__arch"><img src="./img/arch.svg" alt="arch">Architecture</div>
                                                   </div>
-                                        <div class="swiper__slide box__item3">
+                                        <div class=" box__item3 book">
                                                   <div class="box__arch"><img src="./img/mount.svg" alt="arch">Mountains</div>          
                                                   </div>
-
-                                                  <div class="swiper__slide box__item3">
+                                                  
+                                                  <div class=" box__item3 book">
                                                     <div class="box__arch"><img src="./img/food.svg" alt="arch"> Food</div>          
                                                     </div>
-                                                    <div class="swiper__slide box__item3">
+                                                   
+                                                    <div class=" box__item3 book">
                                                         <div class="box__arch"><img src="./img/city.svg" alt="arch"> City</div>          
                                                         </div>
+            
                                           
-                                        </div> </div>
-
-
-
-
-
-
+                                                       
+                                        </div> 
+                                   
 
                               <div class="uk-child-width-1-4@m uk-grid-small uk-grid-match" uk-grid>
                                   <div>
@@ -299,18 +300,19 @@
 <footer class="footer">
                               <div class="container">
                               <div class="footer__box ">
-                                <div class="uk-grid-collapse uk-child-width-1-2 uk-child-width-1-1@s uk-grid-row-medium" uk-grid>
-                                    <div class="uk-grid-column-medium">
-                                        <a href="./index.html" class="footer__link">Home</a>
+                                <div class="uk-grid-collapse uk-child-width-1-2 uk-child-width-1-1@s uk-grid-row-medium footer__box-item" uk-grid>
+                                    <div class="uk-grid-column-medium footer__box-item1 uk-margin-remove-left" >
+                                        <a href="./index.html" class="footer__link ">Home</a>
                                         <a href="./page/about.html" class="footer__link">Blog</a>
                                         <a href="./page/works.html" class="footer__link">Cities</a>
                                         <a href="./page/blog.html" class="footer__link">Cuisine</a>
                                     </div>
-                                    <div class="uk-grid-column-medium">
+                                    <div class="uk-grid-column-medium footer__box-item2 uk-margin-remove-left">
                                         <a href="./page/contacts.html" class="footer__link">Souvenirs</a>
                                         <a href="./page/contacts.html" class="footer__link">Shop</a>
                                         <a href="./page/contacts.html" class="footer__link">Donate</a>
                                     </div>
+                        
                                 </div>
                               <!-- <ul class="footer__menu"> 
                                 <div class="footer__menu-item1">                          
@@ -403,18 +405,86 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
-<script>
+<!-- <script>
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
+    // slidesPerView: 5,
+    spaceBetween: 0,
     grabCursor: true,
     centeredSlides: true,
     loop: true,
     loopFillGroupWithBlank: true,
+    freeMode: true,
     pagination: {
+        // el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+          375: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          991: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }
   });
+</script> -->
+<script>
+    const slider = document.querySelector(".wrapper");
+      const preventClick = (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+      }
+      let isDown = false;
+      var isDragged = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener("mousedown", e => {
+        isDown = true;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.classList.remove("active");
+      });
+
+      slider.addEventListener("mouseup", e => {
+        isDown = false;
+        const elements = document.getElementsByClassName("book");
+        if(isDragged){
+            for(let i = 0; i<elements.length; i++){
+                  elements[i].addEventListener("click", preventClick);
+            }
+        }else{
+            for(let i = 0; i<elements.length; i++){
+                  elements[i].removeEventListener("click", preventClick);
+            }
+        }
+        slider.classList.remove("active");
+        isDragged = false;
+      });
+
+      slider.addEventListener("mousemove", e => {
+        if (!isDown) return;
+        isDragged =  true;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+
+      document.getElementsByClassName("book").ondragstart = function() {
+        console.log("Drag start");
+      };
 </script>
 </body>
 </html>
