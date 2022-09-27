@@ -367,7 +367,10 @@ footer {
     color: rgba(28, 100, 167, 1);
   }
   &__logo {
-    display: none;
+    display: block;
+    @media (max-width: $tab) {
+      display: none;
+    }
   }
   &__item {
     display: flex;

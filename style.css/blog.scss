@@ -29,7 +29,7 @@ a {
   // background-color: #1c64a7;
   @media (max-width: $tab) {
     padding: 16px 0;
-    box-shadow:0px 1px 15px rgba(7, 43, 68, 0.1);
+    box-shadow: 0px 1px 15px rgba(7, 43, 68, 0.1);
   }
   &__containe {
     display: flex;
@@ -46,14 +46,13 @@ a {
     @media (max-width: $tab) {
       gap: 8px;
       position: relative;
-      
     }
   }
 
   &__menu {
     display: flex;
     gap: 48px;
-    
+
     @media (max-width: $tab) {
       margin: 0;
       display: none;
@@ -296,21 +295,31 @@ footer {
   }
   &__menu {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 80px;
 
     @media (max-width: $tab) {
       display: flex;
       flex-direction: column;
+
       flex-wrap: wrap;
       gap: 4px;
     }
+  }
+  &__menu-item1 {
+    display: flex;
+    flex-direction: row;
   }
   &__link {
     color: rgba(28, 100, 167, 1);
   }
   &__logo {
+    display: block;
+    @media (max-width: $tab) {
     display: none;
+    }
   }
   &__item {
     display: flex;
@@ -370,4 +379,101 @@ footer {
       object-fit: cover;
     }
   }
+}
+.swiper {
+  width: 100%;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  &__slide {
+    @media (max-width: $tab) {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.swiper__slide {
+  width: 80%;
+}
+
+.swiper__slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper__slide:nth-child(3n) {
+  width: 40%;
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+  margin-bottom: 65px;
+  gap: 2px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:active,
+  &:hover {
+    fill: rgba(28, 100, 167, 1);
+  }
+}
+.btn:active,
+.btn:hover {
+  fill: rgba(28, 100, 167, 1);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: rgba(28, 100, 167, 1);
+}
+
+.btn:hover .icon {
+  stroke: rgba(28, 100, 167, 1);
+}
+
+.page--link:link,
+.page--link:visited {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #343a40;
+  background-color: transparent;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  width: 22px;
+}
+
+.page--link:active,
+.page--link:hover,
+.page--link.page--link--current {
+  background-color: transparent;
+  border: 1px solid rgba(28, 100, 167, 1);
+  border-radius: 10%;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  color: #adb5bd;
 }

@@ -510,7 +510,13 @@ footer {
 }
 
 .footer__logo {
-  display: none;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .footer__logo {
+    display: none;
+  }
 }
 
 .footer__item {
