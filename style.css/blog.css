@@ -209,7 +209,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #1c64a7;
+  background-color: white;
 }
 
 .header .gam-btn-input:checked ~ .gam-btn .header__gam-line:first-child {
@@ -290,6 +290,7 @@ a {
           box-sizing: border-box;
   padding: 5px;
   font-size: 12px;
+  padding-right: 8px;
 }
 
 .box__more {
@@ -379,6 +380,7 @@ a {
 .box__item2--share {
   margin: 0;
   font-size: 14px;
+  color: #1c64a7;
 }
 
 .box__item2--p {
@@ -466,10 +468,29 @@ footer {
 
 .footer__box-item1 {
   margin-left: 200px;
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .footer__box-item1 {
+    text-align: left;
+  }
 }
 
 .footer__link {
   color: #1c64a7;
+}
+
+.footer__link-wrapper {
+  display: block;
+  margin-right: 50px;
+}
+
+@media (min-width: 991px) {
+  .footer__link-wrapper {
+    display: inline;
+    margin-left: 0;
+  }
 }
 
 .footer__logo {

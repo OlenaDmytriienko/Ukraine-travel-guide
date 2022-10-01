@@ -148,7 +148,7 @@ a {
     &:checked {
       ~ .header__menu {
         display: flex;
-        background-color: #1c64a7;
+        background-color: white;
       }
       ~ .gam-btn {
         .header__gam-line:first-child {
@@ -211,7 +211,9 @@ a {
     box-sizing: border-box;
     padding: 5px;
     font-size: 12px;
+    padding-right: 8px;
   }
+  
   &__more {
     text-decoration: underline;
     color: rgba(28, 100, 167, 1);
@@ -273,6 +275,7 @@ a {
   &__item2--share {
     margin: 0;
     font-size: 14px;
+    color: rgba(28, 100, 167, 1);
   }
   &__item2--p {
     margin: 0;
@@ -301,6 +304,7 @@ footer {
     padding-bottom: 30px;
     margin-bottom: 36px;
   }
+  
   &__menu {
     display: flex;
     flex-direction: row;
@@ -329,14 +333,22 @@ footer {
   }
   &__box-item1 {
     margin-left: 200px;
-
-    // @media (max-width: $tab) {
-    //  margin-left: 100px;
-    // }
+    text-align: right;
+    @media (max-width: $tab) {
+     text-align:left ;
+    }
   }
  
   &__link {
     color: rgba(28, 100, 167, 1);
+  }
+  &__link-wrapper {
+    display: block;
+    margin-right: 50px;
+    @media (min-width: $tab) {
+     display: inline;
+     margin-left: 0;
+    }
   }
   &__logo {
     display: block;

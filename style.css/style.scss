@@ -201,7 +201,7 @@ a {
   background: url("../img/serch.svg") no-repeat;
 }
 #input {
-  width: 331px;
+  width: 288px;
   padding: 8px 13px;
   border: 1px solid rgba(186, 199, 210, 1);
 }
@@ -270,6 +270,7 @@ h1 {
     border-radius: 20px;
     box-sizing: border-box;
     padding: 5px;
+    padding-right: 8px;
     font-size: 12px;
   }
   &__more {
@@ -325,6 +326,7 @@ h1 {
   &__item2--share {
     margin: 0;
     font-size: 14px;
+    color: rgba(28, 100, 167, 1);
   }
   &__item2--p {
     margin: 0;
@@ -352,19 +354,50 @@ footer {
     padding-bottom: 30px;
     margin-bottom: 36px;
   }
+  
   &__menu {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 80px;
+
     @media (max-width: $tab) {
       display: flex;
       flex-direction: column;
+
       flex-wrap: wrap;
       gap: 4px;
     }
   }
+  &__menu-item1 {
+    display: flex;
+    flex-direction: row;
+  }
+  &__box-item {
+    display: flex;
+    flex-wrap: nowrap !important;
+    list-style: none;
+    justify-content: center;
+   
+  }
+  &__box-item1 {
+    margin-left: 200px;
+    text-align: right;
+    @media (max-width: $tab) {
+     text-align:left ;
+    }
+  }
+ 
   &__link {
     color: rgba(28, 100, 167, 1);
+  }
+  &__link-wrapper {
+    display: block;
+    margin-right: 50px;
+    @media (min-width: $tab) {
+     display: inline;
+    }
   }
   &__logo {
     display: block;
