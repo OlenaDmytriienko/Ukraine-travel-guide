@@ -1,0 +1,233 @@
+ul li {
+  list-style: none !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans Caption" !important;
+}
+
+.page-wrapper {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1179px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 16px 0;
+    -webkit-box-shadow: 0px 1px 15px rgba(7, 43, 68, 0.1);
+            box-shadow: 0px 1px 15px rgba(7, 43, 68, 0.1);
+  }
+}
+
+.header__containe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 48px;
+}
+
+@media (max-width: 991px) {
+  .header__nav {
+    gap: 8px;
+    position: relative;
+  }
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 48px;
+}
+
+@media (max-width: 991px) {
+  .header__menu {
+    margin: 0;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 26px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #1c64a7;
+    z-index: 1;
+  }
+}
+
+.header__menu-item {
+  color: white;
+}
+
+.header__link {
+  font-size: 18px;
+  line-height: 26px;
+  color: #1c64a7;
+  position: relative;
+  text-decoration: none;
+}
+
+.header__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin: 5px auto 0;
+  height: 1px;
+  background-color: white;
+  -webkit-transition: width 0.6s;
+  transition: width 0.6s;
+}
+
+.header__link:hover::after {
+  width: 80%;
+  color: white !important;
+}
+
+.header__link--active::after {
+  width: 80%;
+}
+
+@media (max-width: 991px) {
+  .header__link::after {
+    display: none;
+  }
+}
+
+.header__mag {
+  height: 24px;
+  width: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 10;
+}
+
+.header__gam-btn {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .header__gam-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
+
+.header__gam-line {
+  width: 16px;
+  height: 1px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  background: #0e3457;
+}
+
+.header .gam-btn {
+  z-index: 10;
+}
+
+@media (max-width: 991px) {
+  .header .gam-btn {
+    margin-left: 170px;
+  }
+}
+
+.header .gam-btn-input {
+  display: none;
+}
+
+.header .gam-btn-input:checked ~ .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+}
+
+.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:first-child {
+  -webkit-transform: rotate(311deg) translate(-2px, 2px);
+          transform: rotate(311deg) translate(-2px, 2px);
+}
+
+.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:nth-child(2) {
+  display: none;
+}
+
+.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:last-child {
+  -webkit-transform: rotate(230deg) translate(2px, 2px);
+          transform: rotate(230deg) translate(2px, 2px);
+}
+
+#map {
+  margin-top: 120px;
+  height: 100vh;
+}
+/*# sourceMappingURL=map.css.map */

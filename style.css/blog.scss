@@ -164,6 +164,10 @@ a {
     }
   }
 }
+#map{
+  height: 600px;
+  width: 100%;
+}
 .box {
   &__title {
     margin: 0 auto;
@@ -184,6 +188,7 @@ a {
     padding-top: 36px;
     padding-bottom: 120px;
     color: rgba(28, 100, 167, 1) !important;
+  
     @media (max-width: $tab) {
       padding-bottom: 60px;
     }

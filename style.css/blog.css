@@ -226,6 +226,11 @@ a {
           transform: rotate(230deg) translate(2px, 2px);
 }
 
+#map {
+  height: 600px;
+  width: 100%;
+}
+
 .box__title {
   margin: 0 auto;
   text-align: center;
