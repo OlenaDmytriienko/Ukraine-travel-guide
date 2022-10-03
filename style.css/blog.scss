@@ -164,9 +164,8 @@ a {
     }
   }
 }
-#map{
-  height: 600px;
-  width: 100%;
+.placeholder{
+  padding-bottom:60px ;
 }
 .box {
   &__title {
@@ -174,7 +173,7 @@ a {
     text-align: center;
     width: 100%;
     margin-bottom: 48px;
-    margin-top: 120px;
+    margin-top: 60px;
     color: rgba(14, 52, 87, 1);
     font-size: 28px;
     line-height: 37px;

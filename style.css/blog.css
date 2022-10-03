@@ -226,9 +226,8 @@ a {
           transform: rotate(230deg) translate(2px, 2px);
 }
 
-#map {
-  height: 600px;
-  width: 100%;
+.placeholder {
+  padding-bottom: 60px;
 }
 
 .box__title {
@@ -236,7 +235,7 @@ a {
   text-align: center;
   width: 100%;
   margin-bottom: 48px;
-  margin-top: 120px;
+  margin-top: 60px;
   color: #0e3457;
   font-size: 28px;
   line-height: 37px;
