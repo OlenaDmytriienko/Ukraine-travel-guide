@@ -69,6 +69,17 @@ a {
   }
 }
 
+@media (max-width: 991px) {
+  .header__nav-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,6 +149,16 @@ a {
 @media (max-width: 991px) {
   .header__link::after {
     display: none;
+  }
+}
+
+.header__mag-item {
+  margin-left: 111px;
+}
+
+@media (max-width: 991px) {
+  .header__mag-item {
+    margin-left: 0px;
   }
 }
 
@@ -263,6 +284,10 @@ a {
   }
 }
 
+.first__input {
+  border-radius: 4px;
+}
+
 #label {
   position: relative;
 }
@@ -281,6 +306,7 @@ a {
   width: 288px;
   padding: 8px 13px;
   border: 1px solid #bac7d2;
+  border-radius: 4px;
 }
 
 .blog__title {
@@ -371,12 +397,20 @@ h1 {
   padding: 5px;
   padding-right: 8px;
   font-size: 12px;
+  font-family: 'Montserrat' !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box__more {
   text-decoration: underline;
   color: #1c64a7;
   vertical-align: middle;
+  font-family: 'Montserrat' !important;
 }
 
 .box__item3 {
@@ -410,8 +444,10 @@ h1 {
   margin: 0;
   font-size: 14px;
   font-weight: 20px;
+  font-family: 'Montserrat' !important;
+  line-height: 1.4 !important;
   color: #6a8baa;
-  padding-bottom: 4px;
+  padding-bottom: 14px;
 }
 
 .box__item2 {
@@ -422,7 +458,6 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 21px;
-  padding-bottom: 14px;
 }
 
 .box__item2--box {
@@ -430,7 +465,7 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   color: #bac7d2;
-  gap: 3px;
+  gap: 4px;
 }
 
 .box__item2--box1 {
@@ -438,7 +473,7 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   color: #bac7d2;
-  gap: 3px;
+  gap: 6px;
 }
 
 .box__item2--img {
@@ -450,6 +485,7 @@ h1 {
   margin: 0;
   font-size: 14px;
   color: #1c64a7;
+  font-family: 'Montserrat' !important;
 }
 
 .box__item2--p {
@@ -462,6 +498,10 @@ h1 {
   width: 21px;
 }
 
+button {
+  border-radius: 4px !important;
+}
+
 .uk-card-title {
   text-transform: uppercase;
   font-family: "PT Sans Caption";
@@ -469,6 +509,7 @@ h1 {
 
 h3 {
   color: #0e3457;
+  line-height: 1.2 !important;
 }
 
 footer {

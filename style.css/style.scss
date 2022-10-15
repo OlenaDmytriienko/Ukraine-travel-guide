@@ -47,7 +47,12 @@ a {
       position: relative;
     }
   }
-
+  &__nav-item {
+ @media (max-width: $tab) {
+ display: flex;
+ justify-content: flex-end;
+  }
+  }
   &__menu {
     display: flex;
     gap: 48px;
@@ -106,6 +111,12 @@ a {
         display: none;
       }
     }
+  }
+  &__mag-item {
+   margin-left: 111px;
+   @media (max-width: $tab) {
+   margin-left: 0px;
+  }
   }
   &__mag {
     height: 24px;
@@ -186,6 +197,9 @@ a {
       line-height: 20px;
     }
   }
+  &__input {
+   border-radius: 4px;
+  }
 }
 #label {
   position: relative;
@@ -204,6 +218,7 @@ a {
   width: 288px;
   padding: 8px 13px;
   border: 1px solid rgba(186, 199, 210, 1);
+  border-radius: 4px;
 }
 
 .blog__title {
@@ -272,11 +287,15 @@ h1 {
     padding: 5px;
     padding-right: 8px;
     font-size: 12px;
+    font-family: 'Montserrat' !important;
+    display: flex;
+    align-items: center;
   }
   &__more {
     text-decoration: underline;
     color: rgba(28, 100, 167, 1);
     vertical-align: middle;
+    font-family: 'Montserrat' !important;
   }
   &__item3 {
     display: flex;
@@ -300,24 +319,25 @@ h1 {
     margin: 0;
     font-size: 14px;
     font-weight: 20px;
+    font-family: 'Montserrat' !important;
+    line-height: 1.4 !important;
     color: rgba(106, 139, 170, 1);
-    padding-bottom: 4px;
+    padding-bottom: 14px;
   }
   &__item2 {
     display: flex;
     justify-content: space-between;
     height: 21px;
-    padding-bottom: 14px;
   }
   &__item2--box {
     display: flex;
     color: rgba(186, 199, 210, 1);
-    gap: 3px;
+    gap: 4px;
   }
   &__item2--box1 {
     display: flex;
     color: rgba(186, 199, 210, 1);
-    gap: 3px;
+    gap: 6px;
   }
   &__item2--img {
     height: 21px;
@@ -327,6 +347,7 @@ h1 {
     margin: 0;
     font-size: 14px;
     color: rgba(28, 100, 167, 1);
+    font-family: 'Montserrat' !important;
   }
   &__item2--p {
     margin: 0;
@@ -337,12 +358,16 @@ h1 {
     width: 21px;
   }
 }
+button{
+  border-radius: 4px!important;
+}
 .uk-card-title {
   text-transform: uppercase;
   font-family: "PT Sans Caption";
 }
 h3 {
   color: rgba(14, 52, 87, 1);
+  line-height: 1.2 !important;
 }
 footer {
   background-color: rgba(106, 139, 170, 0.1);

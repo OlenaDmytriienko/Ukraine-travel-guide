@@ -4592,31 +4592,31 @@ select.uk-form-width-xsmall {
  */
 /* Horizontal */
 .uk-grid {
-  margin-left: -30px;
+  margin-left: -24px;
 }
 .uk-grid > * {
-  padding-left: 30px;
+  padding-left: 24px;
 }
 /* Vertical */
 .uk-grid + .uk-grid,
 .uk-grid > .uk-grid-margin,
 * + .uk-grid-margin {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
   /* Horizontal */
   .uk-grid {
-    margin-left: -40px;
+    margin-left: -24px;
   }
   .uk-grid > * {
-    padding-left: 40px;
+    padding-left: 24px;
   }
   /* Vertical */
   .uk-grid + .uk-grid,
   .uk-grid > .uk-grid-margin,
   * + .uk-grid-margin {
-    margin-top: 40px;
+    margin-top: 24px;
   }
 }
 /*
