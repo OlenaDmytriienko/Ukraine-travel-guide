@@ -52,7 +52,7 @@ a {
   &__menu {
     display: flex;
     gap: 48px;
-
+    padding: 0 !important;
     @media (max-width: $tab) {
       margin: 0;
       display: none;
@@ -107,6 +107,11 @@ a {
         display: none;
       }
     }
+  }
+  &__mag-item {
+    margin-left: 111px;
+   @media (max-width: $tab) {
+   margin-left: 0px;
   }
   &__mag {
     height: 24px;
@@ -216,12 +221,16 @@ a {
     padding: 5px;
     font-size: 12px;
     padding-right: 8px;
+    font-family: 'Montserrat' !important;
+    display: flex;
+    align-items: center;
   }
   
   &__more {
     text-decoration: underline;
     color: rgba(28, 100, 167, 1);
     vertical-align: middle;
+    font-family: 'Montserrat' !important;
   }
   &__item4 {
     display: block;
@@ -254,7 +263,9 @@ a {
     font-size: 14px;
     font-weight: 20px;
     color: rgba(106, 139, 170, 1);
-    padding-bottom: 4px;
+    padding-bottom: 14px;
+    font-family: 'Montserrat' !important;
+    line-height: 1.4 !important;
   }
   &__item2 {
     display: flex;
@@ -265,12 +276,12 @@ a {
   &__item2--box {
     display: flex;
     color: rgba(186, 199, 210, 1);
-    gap: 3px;
+    gap: 4px;
   }
   &__item2--box1 {
     display: flex;
     color: rgba(186, 199, 210, 1);
-    gap: 3px;
+    gap: 6px;
   }
   &__item2--img {
     height: 21px;
@@ -280,6 +291,7 @@ a {
     margin: 0;
     font-size: 14px;
     color: rgba(28, 100, 167, 1);
+    font-family: 'Montserrat' !important;
   }
   &__item2--p {
     margin: 0;
@@ -296,6 +308,7 @@ a {
 }
 h3 {
   color: rgba(14, 52, 87, 1);
+  line-height: 1.2 !important;
 }
 
 footer {
