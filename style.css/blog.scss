@@ -112,13 +112,18 @@ a {
     margin-left: 111px;
    @media (max-width: $tab) {
    margin-left: 0px;
-  }
+  } }
   &__mag {
     height: 24px;
     width: 24px;
     display: flex;
     flex-direction: row;
     z-index: 10;
+  }
+  &__mag-item1 {
+  width: 159px !important;
+  display: flex;
+  justify-content: flex-end;
   }
 
   &__gam-btn {
