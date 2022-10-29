@@ -23,6 +23,7 @@ a {
 }
 
 .header {
+  margin-left: 0;
   top: 0;
   left: 0;
   right: 0;
@@ -192,6 +193,7 @@ a {
 }
 
 .header .gam-btn {
+  margin-left: 0;
   z-index: 10;
 }
 
@@ -201,29 +203,167 @@ a {
   }
 }
 
-.header .gam-btn-input {
-  display: none;
+.tm-header {
+  z-index: 100;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
-.header .gam-btn-input:checked ~ .header__menu {
+.tm-header-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 68px;
 }
 
-.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:first-child {
+.tm-header__logo {
+  display: inline-block;
+}
+
+.tm-header-button {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  font-size: 16px;
+}
+
+.tm-header-button-menu {
+  z-index: 10;
+  margin-left: 12px;
+}
+
+.tm-header-button:hover, .tm-header-button:focus {
+  color: #1c64a7;
+  text-decoration: none;
+}
+
+.tm-header-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.tm-header-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tm-header-menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tm-header-menu-item-link {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 5px;
+  /* identical to box height, or 144% */
+  text-transform: capitalize;
+  /* White */
+  color: #1c64a7;
+}
+
+.tm-header-menu-item-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin: 5px auto 0;
+  height: 1px;
+  background-color: #1c64a7;
+  -webkit-transition: width 0.6s;
+  transition: width 0.6s;
+}
+
+.tm-header-menu-item-link:hover {
+  color: #1c64a7 !important;
+  text-decoration: none;
+}
+
+.tm-header-menu-item-link:hover::after {
+  width: 80%;
+  color: #1c64a7 !important;
+}
+
+.tm-header-menu-item-link--active {
+  color: #1c64a7 !important;
+}
+
+.tm-header-menu-item-link--active::after {
+  width: 80%;
+}
+
+@media (max-width: 959px) {
+  .tm-header .gam-btn-input:checked ~ .tm-header-menu {
+    background-color: #fff;
+    position: fixed;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .tm-header-menu {
+    left: 200px;
+    right: 200px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 48px;
+  }
+}
+
+.tm-header .gam-btn-input:checked ~ .gam-btn .header__gam-line:first-child {
   -webkit-transform: rotate(311deg) translate(-2px, 2px);
-          transform: rotate(311deg) translate(-2px, 2px);
+  transform: rotate(311deg) translate(-2px, 2px);
 }
 
-.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:nth-child(2) {
+.tm-header .gam-btn-input:checked ~ .gam-btn .header__gam-line:nth-child(2) {
   display: none;
 }
 
-.header .gam-btn-input:checked ~ .gam-btn .header__gam-line:last-child {
+.tm-header .gam-btn-input:checked ~ .gam-btn .header__gam-line:last-child {
   -webkit-transform: rotate(230deg) translate(2px, 2px);
-          transform: rotate(230deg) translate(2px, 2px);
+  transform: rotate(230deg) translate(2px, 2px);
 }
 
 .placeholder {
@@ -231,7 +371,7 @@ a {
 }
 
 #map {
-  margin-top: 60px;
+  margin-top: 120px !important;
   margin-bottom: 20px;
   height: 83vh;
 }
